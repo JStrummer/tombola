@@ -222,6 +222,7 @@ const smorfia = {
 const lastNumber = {output: '', value: undefined, count: 0, history: []};
 let numberPool = [];
 function newNumberPool() {numberPool = createArray(1,90)};
+newNumberPool();
 
 function pullNumber () {
   if (numberPool.length < 1) {lastNumber.output = 'ULTIMO NUMERO!!!'}
@@ -249,9 +250,7 @@ function changeText () {
   pullNumberBtn.textContent = randomN(strings);
 }
 
-newNumberPool();
-
-newGameBtn.onclick = randomBigCardToHtml;
-newCardAiBtn.onclick = randomBigCardToHtml;
+newGameBtn.addEventListener ('click', randomBigCardToHtml);
+newCardAiBtn.addEventListener ('click', randomBigCardToHtml);
 pullNumberBtn.addEventListener ('click', pullNumber);
 pullNumberBtn.addEventListener ('click', changeText);
