@@ -1,5 +1,5 @@
 "use strict";
-import {mod} from 'module.js';
+import {mod} from './module.js';
 //resize body to fit window
 const body = document.querySelector('body');
 let winWidth = window.innerWidth;
