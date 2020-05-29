@@ -25,22 +25,22 @@ var littleCard4 = new Card();
 var littleCard5 = new Card();
 var littleCard6 = new Card();
 var board = [littleCard1,littleCard2,littleCard3,littleCard4,littleCard5,littleCard6];
-<<<<<<< Updated upstream
+
 var unpulledNumbers = [];
 var unvalidNumbers = [];
-let numberPool = [];
-=======
->>>>>>> Stashed changes
+
+
+
 const lastNumber = {output: '', value: undefined, count: 0, history: []};
 
-<<<<<<< Updated upstream
+
 // HTML Elements
 
-=======
+
 // reference to HTML Elements
 const boardAi = document.querySelectorAll('#ai');
 const boardPlayer = document.querySelectorAll('#player');
->>>>>>> Stashed changes
+
 const displayLastNumber = document.getElementById('lastnumber');
 let numberFlow = document.getElementById('flow');
 let numberList = numberFlow.childNodes;
@@ -52,7 +52,7 @@ let pullNumberBtn = document.getElementById('pullnumber');
 
 
 
-<<<<<<< Updated upstream
+
 // create tabellone
 function createTable() {
   let cartella1 = [].concat(createArray(1,5)).concat(createArray(11,15)).concat(createArray(21,25));
@@ -73,12 +73,9 @@ function createTable() {
   }
 }
 
-// Card prototype
-function Card() {
-  this.c0 = [], this.c1 = [], this.c2 = [], this.c3 = [], this.c4 = [], this.c5 = [], this.c6 = [], this.c7 = [], this.c8 = []
-}
 
-function assignDec (n) {
+
+/*function assignDec (n) {
   if (n >= 1 && n <= 9) return 'c0';
   else if (n >= 10 && n <= 19) return 'c1';
   else if (n >= 20 && n <= 29) return 'c2';
@@ -88,13 +85,13 @@ function assignDec (n) {
   else if (n >= 60 && n <= 69) return 'c6';
   else if (n >= 70 && n <= 79) return 'c7';
   else if (n >= 80 && n <= 90) return 'c8';
-}
+}*/
 
 // create 90 random numbers and obj { dec:[0,1,2] } and save it to global bindings board
-=======
+
 // create 90 random numbers and obj { dec:[0,1,2] } and save it to global bindings Board
 var unpulledNumbers = [], unvalidNumbers = [];
->>>>>>> Stashed changes
+
 let randomBoard = function() {
   unpulledNumbers = createArray(1,90);
   for (let blankCard of board) {
@@ -255,5 +252,10 @@ function changeText () {
   let strings = ['TIRALOOOO', 'RAZZOLAAA']
   pullNumberBtn.textContent = randomN(strings);
 }
+newGameBtn.onclick = randomBoardToHtml;
+newCardAiBtn.onclick = randomBoardToHtml;
+pullNumberBtn.addEventListener ('click', pullNumber);
+pullNumberBtn.addEventListener ('click', changeText);
 
 newNumberPool();
+console.log(numberPool);
