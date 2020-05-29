@@ -1,0 +1,246 @@
+<!-- Unlike methods such as getElementsByTagName, the object returned by querySelectorAll
+is not live. It won’t change when you change the document. It is still not a
+real array, though, so you still need to call Array.from if you want to treat it
+like one -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>TOMBOLONE</title>
+  </head>
+  <body>
+    <header>
+      <p type= text>TOMBOLONE</p>
+    </header>
+    <main id="maingrid">
+
+        <ul id="prize">
+          <li>quaterna</li>
+          <li>cinquina</li>
+          <li>tombola</li>
+        </ul>
+
+        <div class="nflow">
+            <div class="flow">
+              <ul id="flow">
+                <li style= "font-size: 250%"> </li><li> </li><li> </li><li> </li><li> </li>
+              </ul>
+            </div>
+          <div class="countnumber">
+              <div class="pulled">
+                <p>n.tirati <span id="pulled">0</span></p>
+                </div>
+              <div class="remanining">
+                <p>n.rimasti <span id="remanining">90</span></p>
+              </div>
+          </div>
+        </div>
+        <div class="portafogli">
+          <p id="total">totale euri</p>
+          <p id="played">euri giocati</p>
+        </div>
+
+        <div class="card" id="cardAi">
+          <table class="cartella1" id="ai">
+            <tr class="r0">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r1">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r2">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+          </table>
+          <table class="cartella2" id="ai">
+            <tr class="r0">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r1">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r2">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+          </table>
+          <table class="cartella3" id="ai">
+            <tr class="r0">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r1">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r2">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+          </table>
+          <table class="cartella4" id="ai">
+            <tr class="r0">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r1">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r2">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+          </table>
+          <table class="cartella5" id="ai">
+            <tr class="r0">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r1">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r2">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+          </table>
+          <table class="cartella6" id="ai">
+            <tr class="r0">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r1">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r2">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+          </table>
+          <button type="button" name="newgame" id="newAI">NUOVO GIOCO</button>
+        </div>
+
+        <div class="tabellone" id="tabellone">
+          <table class="tabellone">
+            <tr class="row0">
+              <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+            </tr>
+            <tr class="row1">
+              <td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+            </tr>
+            <tr class="row2">
+              <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+            </tr>
+            <tr class="row3">
+              <td>31</td><td>32</td><td>33</td><td>34</td><td>35</td><td>36</td><td>37</td><td>38</td><td>39</td><td>40</td>
+            </tr>
+            <tr class="row4">
+              <td>41</td><td>42</td><td>43</td><td>44</td><td>45</td><td>46</td><td>47</td><td>48</td><td>49</td><td>50</td>
+            </tr>
+            <tr class="row5">
+              <td>51</td><td>52</td><td>53</td><td>54</td><td>55</td><td>56</td><td>57</td><td>58</td><td>59</td><td>60</td>
+            </tr>
+            <tr class="row6">
+              <td>61</td><td>62</td><td>63</td><td>64</td><td>65</td><td>66</td><td>67</td><td>68</td><td>69</td><td>70</td>
+            </tr>
+            <tr class="row7">
+              <td>71</td><td>72</td><td>73</td><td>74</td><td>75</td><td>76</td><td>77</td><td>78</td><td>79</td><td>80</td>
+            </tr>
+            <tr class="row8">
+              <td>81</td><td>82</td><td>83</td><td>84</td><td>85</td><td>86</td><td>87</td><td>88</td><td>89</td><td>90</td>
+            </tr>
+          </table>
+          <button type="button" name="pullnumber" id="pullnumber">DALE</button>
+          <p><span id="lastnumber"> </span> <span id="output"> </span></p>
+      </div>
+
+        <div class="card" id="cardPlayer">
+          <table class="cartella1" id="player">
+            <tr class="r0">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r1">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r2">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+          </table>
+          <table class="cartella2" id="player">
+            <tr class="r0">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r1">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r2">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+          </table>
+          <table class="cartella3" id="player">
+            <tr class="r0">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r1">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r2">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+          </table>
+          <table class="cartella4" id="player">
+            <tr class="r0">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r1">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r2">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+          </table>
+          <table class="cartella5" id="player">
+            <tr class="r0">
+              <td class="c0"></td>
+              <td class="c1"></td>
+              <td class="c2"></td>
+              <td class="c3"></td>
+              <td class="c4"></td>
+              <td class="c5"></td>
+              <td class="c6"></td>
+              <td class="c7"></td>
+              <td class="c8"></td>
+            </tr>
+            <tr class="r1">
+              <td class="c0"></td>
+              <td class="c1"></td>
+              <td class="c2"></td>
+              <td class="c3"></td>
+              <td class="c4"></td>
+              <td class="c5"></td>
+              <td class="c6"></td>
+              <td class="c7"></td>
+              <td class="c8"></td>
+            </tr>
+            <tr class="r2">
+              <td class="c0"></td>
+              <td class="c1"></td>
+              <td class="c2"></td>
+              <td class="c3"></td>
+              <td class="c4"></td>
+              <td class="c5"></td>
+              <td class="c6"></td>
+              <td class="c7"></td>
+              <td class="c8"></td>
+            </tr>
+          </table>
+          <table class="cartella6" id="player">
+            <tr class="r0">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r1">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+            <tr class="r2">
+              <td class="c0"></td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td>
+            </tr>
+          </table>
+          <button type="button" name="newgame" id="newgame">NUOVO GIOCO</button>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="UI.js"></script>
+  </body>
+</html>
