@@ -129,6 +129,7 @@ function randomBigCardToHtml (e) {
   } else if (e.target === newCardAiBtn) {
     ref = '#cardAi';
   }
+
 // se su html ci sono gia numeri li cancella
   function clearBoard() {
     for (let cart = 1; cart <= 6; cart++){
@@ -252,3 +253,8 @@ function changeText () {
 }
 
 newNumberPool();
+
+newGameBtn.onclick = randomBigCardToHtml;
+newCardAiBtn.onclick = randomBigCardToHtml;
+pullNumberBtn.addEventListener ('click', pullNumber);
+pullNumberBtn.addEventListener ('click', changeText);
