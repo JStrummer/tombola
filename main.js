@@ -19,7 +19,7 @@ var littleCard3 = new Card();
 var littleCard4 = new Card();
 var littleCard5 = new Card();
 var littleCard6 = new Card();
-var bigCard = [littleCard1,littleCard2,littleCard3,littleCard4,littleCard5,littleCard6];
+var board = [littleCard1,littleCard2,littleCard3,littleCard4,littleCard5,littleCard6];
 var unpulledNumbers = [];
 var unvalidNumbers = [];
 let numberPool = [];
@@ -37,8 +37,7 @@ const smorfia = {
 }
 
 // HTML Elements
-const bigCardAi = document.querySelectorAll('#ai');
-const bigCardPlayer = document.querySelectorAll('#player');
+
 const displayLastNumber = document.getElementById('lastnumber');
 let numberFlow = document.getElementById('flow');
 let numberList = numberFlow.childNodes;
@@ -99,10 +98,10 @@ function assignDec (n) {
   else if (n >= 80 && n <= 90) return 'c8';
 }
 
-// create 90 random numbers and obj { dec:[0,1,2] } and save it to global bindings bigCard
-let randomBigCard = function() {
+// create 90 random numbers and obj { dec:[0,1,2] } and save it to global bindings board
+let randomBoard = function() {
   unpulledNumbers = createArray(1,90);
-  for (let blankCard of bigCard) {
+  for (let blankCard of board) {
     unpulledNumbers = unpulledNumbers.concat(unvalidNumbers);
     let count = 0;
     while (count < 15 && unpulledNumbers.length > 0) {
@@ -120,7 +119,7 @@ let randomBigCard = function() {
 }
 
 
-function randomBigCardToHtml (e) {
+function randomBoardToHtml (e) {
 
   let ref;
   if (e.target === newGameBtn) {
@@ -141,11 +140,11 @@ function randomBigCardToHtml (e) {
   }
   clearBoard();
 
-  randomBigCard();
+  randomBoard();
 
 
-  // create littleCard.row as a Map object and sort bigCard into littleCard.row
-  for (let obj of bigCard) {
+  // create littleCard.row as a Map object and sort board into littleCard.row
+  for (let obj of board) {
     obj.row0 = new Map();
     obj.row1 = new Map();
     obj.row2 = new Map();
@@ -190,7 +189,7 @@ function randomBigCardToHtml (e) {
   }
   // link littleCard.row to HTML
   let cartN = 0;
-  for (let obj of bigCard) {
+  for (let obj of board) {
     cartN++;
     let rows = ['row0','row1','row2'];
     let rowN = -1;
@@ -207,8 +206,8 @@ function randomBigCardToHtml (e) {
     }
   }
 
-// azzera tutte le proprieta di bigCard
- for (let obj of bigCard) {
+// azzera tutte le proprieta di board
+ for (let obj of board) {
     for (let prop in obj) {
       if (Object.getPrototypeOf(obj[prop]) === Array.prototype) {
         obj[prop] = [];
