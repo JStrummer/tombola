@@ -1,5 +1,5 @@
 "use strict";
-
+import {mod} from 'module.js';
 //resize body to fit window
 const body = document.querySelector('body');
 let winWidth = window.innerWidth;
@@ -48,6 +48,11 @@ let numberList = numberFlow.childNodes;
 let newGameBtn = document.getElementById('newgame');
 let newCardAiBtn = document.getElementById('newAI');
 let pullNumberBtn = document.getElementById('pullnumber');
+newGameBtn.onclick = randomBigCardToHtml;
+newCardAiBtn.onclick = randomBigCardToHtml;
+pullNumberBtn.addEventListener ('click', pullNumber);
+pullNumberBtn.addEventListener ('click', changeText);
+
 
 // global function
 function createArray(start, end) {
