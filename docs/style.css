@@ -1,0 +1,74 @@
+/*
+The notation p > a …{} applies the given styles to all <a> tags that are direct
+children of <p> tags. Similarly, p a …{} applies to all <a> tags inside <p> tags,
+whether they are direct or indirect children.
+*/
+
+/* defining grids*/
+* {text-align: center;}
+body {
+  overflow: hidden;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border: solid black 1px;
+}
+header {
+  height: 40px;
+  background-color: rgba(255, 100, 0, 1);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: .1fr 2fr;
+  grid-auto-rows: minmax(min-content, auto);
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+#lastnumber {
+  border: solid black 1px;
+}
+li {
+  list-style-type: none;
+  text-align: left;
+}
+
+.nflow {
+  display: grid;
+}
+
+
+#flow {
+  text-align: center;
+}
+#flow  li {
+  display: inline;
+  margin: 5%;
+}
+
+.countnumber {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+}
+
+/*div#ai, div#player {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: red;
+  border: solid 1px black;
+  */
+
+}
+
+#tabellone {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: solid 1px black;
+}
