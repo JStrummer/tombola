@@ -1,4 +1,5 @@
 "use strict";
+
 //resize body to fit window
 const body = document.querySelector('body');
 let winWidth = window.innerWidth;
